@@ -1,5 +1,5 @@
 # Description
-#   A hubot script that does the things
+#   Post an emergency compliment to a Slack user with http://emergencycompliment.com/!"
 #
 # Configuration:
 #   NONE
@@ -31,7 +31,7 @@ module.exports = (robot) ->
 
       if !e && r.statusCode == 200
         compliment = "@#{username}, #{
-          compliments[ random(compliments) ].gsx$compliments.$t
+          compliments[ random compliments ].gsx$compliments.$t
         }"
 
         if /tj|tom\sblair/.test username
