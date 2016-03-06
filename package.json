@@ -1,7 +1,7 @@
 {
   "name": "hubot-emergency-compliment",
   "description": "Post an emergency compliment to a Slack user with http://emergencycompliment.com/!",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "author": "Joe Groseclose <@benderTheCrime>",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts",

@@ -5,7 +5,7 @@
 #   NONE
 #
 # Commands:
-#   hubot emergency compliment <username> - Responds to the user with a compliment
+#   hubot compliment <username> - Responds to the user with a compliment
 #
 # Notes:
 #   If <username> is "me" the script will respond to the user who sent the message
@@ -21,7 +21,7 @@ request = require 'request'
 url = 'https://spreadsheets.google.com/feeds/list/1eEa2ra2yHBXVZ_ctH4J15tFSGEu-VTSunsrvaCAV598/od6/public/values?alt=json'
 
 module.exports = (robot) ->
-  robot.respond /emergency (compliment )?(.*)/i, (res) ->
+  robot.respond /compliment (.*)/i, (res) ->
     username = res.match[ 2 ]
     username = res.message.user.name if username == 'me'
     compliment = "I like the cut of your jib, @#{username}"

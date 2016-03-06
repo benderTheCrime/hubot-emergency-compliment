@@ -23,8 +23,8 @@ Then add **hubot-emergency-compliment** to your `external-scripts.json`:
 ## Sample Interaction
 
 ```
-user1>> emergency compliment me
+user1>> compliment me
 hubot>> @user1, You're beautiful!
-user2>> emergency compliment user1
+user2>> compliment user1
 hubot>> @user1, You're beautiful!
 ```
