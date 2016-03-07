@@ -22,8 +22,9 @@ url = 'https://spreadsheets.google.com/feeds/list/1eEa2ra2yHBXVZ_ctH4J15tFSGEu-V
 
 module.exports = (robot) ->
   robot.respond /compliment (.*)/i, (res) ->
-    username = res.match[ 2 ]
+    username = res.match[ 1 ]
     username = res.message.user.name if username == 'me'
+
     compliment = "I like the cut of your jib, @#{username}"
 
     request.get url, (e, r, body) ->
