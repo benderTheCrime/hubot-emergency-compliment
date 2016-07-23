@@ -22,18 +22,15 @@ url = 'https://spreadsheets.google.com/feeds/list/1eEa2ra2yHBXVZ_ctH4J15tFSGEu-V
 
 module.exports = (robot) ->
   robot.respond /compliment (.*)/i, (res) ->
-    username = res.match[ 1 ]
-    username = res.message.user.name if username == 'me'
-
+    username = res.match[ 1 ].replace /^@/, ''
+    username = res.message.user.name if username is 'me'
     compliment = "I like the cut of your jib, @#{username}"
 
     request.get url, (e, r, body) ->
-      compliments = JSON.parse(body).feed.entry;
+      compliments = JSON.parse(body).feed.entry
 
-      if !e && r.statusCode == 200
-        compliment = "@#{username}, #{
-          compliments[ random compliments ].gsx$compliments.$t
-        }"
+      if !e and r.statusCode is 200
+        compliment = "@#{username}, #{compliments[ random compliments ].gsx$compliments.$t}"
 
         if /tj|tom\sblair/.test username
           compliment += ' :millennial: #appreciateTJday'
