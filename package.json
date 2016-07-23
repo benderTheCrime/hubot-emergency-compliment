@@ -1,7 +1,7 @@
 {
   "name": "hubot-emergency-compliment",
   "description": "Post an emergency compliment to a Slack user with http://emergencycompliment.com/!",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "Joe Groseclose <@benderTheCrime>",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts",
@@ -19,8 +19,7 @@
     "chai": "^3.5.0",
     "hubot-test-helper": "^1.4.4",
     "mocha": "^2.4.5",
-    "request": "^2.69.0",
-    "sinon": "^1.17.3"
+    "request": "^2.69.0"
   },
   "peerDependencies": {
     "hubot": "2.x"
@@ -28,16 +27,10 @@
   "devDependencies": {
     "chai": "^2.1.1",
     "coffee-script": "1.6.3",
-    "grunt": "^0.4.5",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-mocha-test": "~0.12.7",
-    "grunt-release": "~0.11.0",
     "hubot": "2.x",
     "matchdep": "~0.3.0",
     "mocha": "^2.1.0",
-    "sinon": "^1.13.0",
-    "sinon-chai": "^2.7.0"
+    "sinon": "^1.13.0"
   },
   "main": "index.coffee"
 }
